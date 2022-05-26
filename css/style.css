@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #42193d;
+}
+.link{
+    position: relative;
+    top: -10vh;
+}
+header{
+    background-color: #42193d;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top:0;
+    left:0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 5px 10px rgba(0,0,0,0.22);
+    z-index: 1000;
+    margin-top: -105px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-block{
+    display: inline-block;
+    margin: 0 2%;
+    animation: spawn-btn calc(var(--delay)/4 * 1s) linear 1;
+}
+
+header a{
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1,5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+    color: #fff;
+}
+header a:hover{
+    letter-spacing: 0.25em;
+    background-color: var(--color);
+    box-shadow: 0 0 35px var(--color);
+    color: var(--color);
+}
+header a:before{
+    content: '';
+    position: absolute;
+    inset:2px;
+    background: #42193d;
+}
+header a span{
+    position: relative;
+    z-index: 1;
+}
+header a i{
+    position:absolute;
+    inset: 0;
+    display: block;
+}
+header a i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #42193d;
+    transform: translateX(-50%) skew(325deg);
+    transition: 0.5s;
+}
+header a:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+header a i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 80%;
+    width: 10px;
+    height: 4px;
+    background: #42193d;
+    transform: translateX(-50%) skew(325deg);
+    transition: 0.5s;
+}
+header a:hover i::after{
+    width: 20px;
+    right: 20%;
+}
+main{
+    perspective: 3px;
+}
+section{
+    background-color: white;
+    border-radius: 25px;
+    padding: 7%;
+}
+.fon{
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    background: linear-gradient(to top left, rgb(229, 255, 0) 5%, #FF8940 20%, #1736ff);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+svg{
+    z-index: 3;
+}
+.fon svg{
+    position: absolute;
+    bottom: 80px;
+}
+.content .first-stalactite{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.content .first-stalagmite{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+.fon img{
+    position: absolute;
+    left: 5vw;
+    bottom: 30vh;
+    width: 35vw;
+}
+.red-point{
+    display: block;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    top: calc(50% - 15vw/2);
+    left: calc(50% - 15vw/2);
+    z-index: 0;
+    width: 15vw;
+    height: 15vw;
+}
+.red-point circle{
+}
+h1{
+    font-size: 135px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    color:rgba(0, 0, 0, 0);
+    text-transform: uppercase;
+    z-index: 10;
+}
+h1::before{
+    content: var(--data-text);
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    -webkit-text-stroke: 0 rgba(72, 72, 72, 0.453);
+    overflow: hidden;
+    text-align: start;
+    animation: title-type 1.5s linear 1;
+    z-index: 10;
+}
+h2{
+    font-size: 50px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+.info h2{
+    margin: 20px;
+}
+p{
+    font-size: 25px;
+}
+.content{
+    position: relative;
+    width: 80%;
+    padding: 150px 10%;
+    text-align: center;
+    background-position: 0px -500px;
+    
+    background: linear-gradient(to bottom left, rgb(229, 255, 0) 5%, #FF8940 20%, #1736ff) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.info{
+    background-color: #42193d;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 15%;
+}
+.info .block{
+    width: 60%;
+    margin: auto;
+}
+.info section{
+    margin-top: 0;
+    margin-bottom:0;
+    box-sizing: border-box;
+}
+
+.culture{
+    margin: 200px 0;
+    display: inline-block;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+.culture img{
+    display: inline-block;
+    width: 45%;
+    display: block;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.25), 0 5px 10px rgba(0,0,0,0.22);
+}
+.culture .text{
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+    position: relative;
+}
+.culture .text .overlay{
+    position:absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.culture .slow-show{
+    transform: translate(0, 0);
+}
+.culture .slow-show-active .overlay{
+    animation: scaleOverlay 1s forwards cubic-bezier(0.85, 0, 0.15, 1);
+}
+.culture .text p{
+    opacity: 0;
+}
+.culture .slow-show-active p{
+    animation: revealText 0.1s 0.4s forwards;
+}
+.culture .text h2{
+    opacity: 0;
+}
+.culture .slow-show-active h2{
+    animation: revealText 0.1s 0.4s forwards;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+.cards h2{
+    margin-bottom: 50px;
+}
+.inline{
+    display: inline-block;
+}
+.card{
+    background-image: var(--fon);
+    background-position: center;
+
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 20px;
+    width: 20vw;
+    height: 20vw;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin: 2vw 2vw;
+    vertical-align: top;
+    transition: 1s;
+    overflow: hidden;
+}
+.card .black-fon{
+    background: rgba(0,0,0,0);
+    height: 100%;
+    text-align: center;
+
+    
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    margin-bottom: 300px;
+    flex-direction: column;
+    color: white;
+    position: relative;
+
+    padding: 30px;
+    padding-top: 50px;
+}
+.card .text{
+    opacity: 0;
+    transition: 1s;
+    z-index: 2;
+}
+
+.card:hover{
+    transform: translateY(-25px);
+    -webkit-box-shadow: 0px 54px 83px 10px rgba(212, 122, 255, 0.2);
+    -moz-box-shadow: 0px 54px 83px 10px rgba(212, 122, 255, 0.2);
+    box-shadow: 0px 54px 83px 10px rgba(212, 122, 255, 0.2);
+}
+
+.card:hover .black-fon{
+  background: rgba(0,0,0,.5);
+}
+.black-fon:hover .text{
+    opacity: 1;
+}
+.black-fon .text{
+    position: relative;
+    overflow: hidden;
+}
+.black-fon .text p{
+    font-size: 0.9em;
+    padding: 15px;
+}
+.text hr{
+    position: absolute;
+    border: none;
+}
+.text hr:nth-child(1){
+    width: 100%;
+    border-top: 2px solid white;
+    transform: translateX(-100%);
+}
+.text hr:nth-child(2){
+    height: 100%;
+    border-right: 2px solid white;
+    transform: translateY(100%);
+    right: 0;
+}
+.text hr:nth-child(3){
+    width: 100%;
+    border-bottom: 3px solid white;
+    transform: translateX(100%);
+    bottom: 0;
+}
+.text hr:nth-child(4){
+    height: 100%;
+    border-left: 2px solid white;
+    transform: translateY(-100%);
+    bottom: 0;
+}
+.black-fon:hover hr:nth-child(1), .black-fon:hover  hr:nth-child(3){
+    animation: horizontal 1s forwards cubic-bezier(0.85, 0, 0.15, 1);
+}
+.black-fon:hover  hr:nth-child(2), .black-fon:hover  hr:nth-child(4){
+    animation: vertical 1s forwards cubic-bezier(0.85, 0, 0.15, 1);
+}

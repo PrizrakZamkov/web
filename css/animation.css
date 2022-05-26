@@ -1,0 +1,77 @@
+.slow-show {
+    margin: 2rem 0;
+    font-size: 3rem;
+    
+    /* Скроем элемент в начальном состоянии */
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  .slow-show.slow-show-active {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+  }
+
+@keyframes spawn-btn{
+  0%{
+      transform: translateY(calc(45% + var(--delay) * 200%));
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+      transform: translateY(calc(25% + var(--delay) * 100%));
+  }
+  100%{
+      transform: translateY(0px);
+  }
+}
+@keyframes op0{
+  0%,100%{
+      opacity: 0;
+  }
+}
+
+@keyframes title-type {
+  0%{
+      width: 0%;
+      border-right: 3px solid rgb(255, 255, 255);
+  }
+  100%{
+      width: 100%;
+      border-right: 3px solid rgba(255, 255, 255, 0.0);
+  }
+}
+
+@keyframes scaleOverlay {
+  50%{
+      transform: scaleX(1);
+  }
+  75%{
+      transform: scaleX(1);
+      transform-origin: left;
+  }
+  76%{
+      transform-origin: right;
+  }
+  100%{
+      transform: scaleX(0);
+      transform-origin: right;
+  }
+}
+
+@keyframes revealText {
+  to{  
+      opacity: 1;
+  }
+}
+@keyframes horizontal {
+  to{
+      transform: translateX(0%);
+  }
+}
+
+@keyframes vertical {
+  to{
+      transform: translateY(0%);
+  }
+}

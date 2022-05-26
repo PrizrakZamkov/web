@@ -1,0 +1,145 @@
+
+@media (max-width: 1850px) {
+    .card {
+        width: 25vw;
+        height: 25vw;
+    }
+}
+@media (max-width: 1650px) {
+    .card{
+        width: 50vw;
+        height: 50vw;
+        background-repeat: no-repeat;
+        display: block;
+    }
+    .black-fon .text p {
+        font-size: 1.6em;
+        padding: 25px;
+    }
+    .cards-content{
+        flex-direction: column;
+    }
+    .fon img {
+        position: absolute;
+    left: 5vw;
+    bottom: 24vh;
+    width: 40vw;
+    }
+}
+@media (max-width: 1370px) {
+    .black-fon .text p {
+        font-size: 1em;
+        padding: 25px;
+    }
+    .info .block {
+        width: 80%;
+    }
+    .culture {
+        flex-direction: column;
+    }
+    .culture img{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .culture .text{
+        width: 90%;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 930px) {
+    .card{
+        width: 75vw;
+        height: 75vw;
+    }
+    .black-fon .text p {
+        font-size: 1.2em;
+        padding: 30px;
+    }
+}
+@media (max-width: 1130px) {
+    .fon img {
+        left: 16vw;
+        bottom: 11vh;
+        width: 68vw;
+        z-index: 2;
+    }
+    .red-point {
+        top: calc(50% - 30vw/2);
+        left: calc(50% - 30vw/2);
+        width: 30vw;
+        height: 30vw;
+    }
+    .fon svg{
+        z-index: 3;
+    }
+    header{
+        z-index: 1000;
+    }
+}
+@media (max-width: 825px) {
+    .fon img {
+        left: 16vw;
+        bottom: 11vh;
+        width: 68vw;
+        z-index: 2;
+    }
+    .red-point {
+        top: calc(50% - 40vw/2);
+        left: calc(50% - 40vw/2);
+        width: 40vw;
+        height: 40vw;
+    }
+    header{
+        height: 130px;
+        display: block;
+        margin-top: -155px;
+    }
+    .fon {
+        margin-bottom: 70px;
+    }
+    header .btn-block{
+        margin: 2% 2%;
+    }
+}
+@media (max-width: 725px) {
+    .card{
+        width: 85vw;
+        height: 85vw;
+    }
+    .black-fon .text p {
+        font-size: 1em;
+        padding: 20px;
+    }
+}
+@media (max-width: 625px) {
+    h1{
+        font-size: 5em;
+    }
+    header{
+        height: 170px;
+        margin-top: -170px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 17px;
+    }
+    .content {
+        width: 100%;
+        padding: 20px 0;
+    }
+    .culture {
+        margin: 50px 0;
+    }
+}
+@media (max-width: 530px) {
+    .card .black-fon {
+        padding: 15px;
+        padding-top: 30px;
+    }
+    .black-fon .text p {
+        font-size: 15px;
+        padding: 20px;
+    }
+}
